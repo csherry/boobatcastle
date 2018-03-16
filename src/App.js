@@ -149,7 +149,7 @@ class App extends Component {
             comp = (
                 <StickPage />
             )
-        } else if (){
+        } else if (this.state.ShowPage === 3){
             comp = (
                 <Quiz />
             )
