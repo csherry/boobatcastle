@@ -17,7 +17,7 @@ class Quiz extends Component {
     }
     
     componentDidMount(){
-        this.socket = mySocket('http://localhost:10022');
+        this.socket = mySocket('http://localhost:10025');
         
         this.socket.on("newq", (data)=>{
             this.setState({
