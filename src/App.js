@@ -6,6 +6,8 @@ import './App.css';
 import ChatPage from './comp/ChatPage.js';
 import {TweenLite, Power1, Circ, TimelineLite, TimelineMax} from "gsap";
 import StickPage from './comp/stick.js';
+import Quiz from './comp/Quiz.js';
+
 
 class App extends Component {
     constructor(props){
@@ -17,6 +19,7 @@ class App extends Component {
         
         this.ShowChat = this.ShowChat.bind(this);
         this.ShowStick = this.ShowStick.bind(this);
+        this.ShowOther = this.ShowOther.bind(this);
     }
     
     ShowChat(){
@@ -28,6 +31,13 @@ class App extends Component {
     
     ShowStick(){
         var bool = 2;
+        this.setState({
+            ShowPage: bool
+        })
+    }
+    
+    ShowOther(){
+        var bool = 3;
         this.setState({
             ShowPage: bool
         })
@@ -139,6 +149,10 @@ class App extends Component {
             comp = (
                 <StickPage />
             )
+        } else if (){
+            comp = (
+                <Quiz />
+            )
         } else {
             comp = (
                <svg xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -236,7 +250,7 @@ viewBox='0 0 1294.26 729.5'>
                     />
                     <path className='cls-17' d='M418.03 587.91h82.75v9.19h-82.75z' />
                 </g>
-                <g id='towerRight'>
+                <g id='towerRight' onClick = {this.ShowOther}>
                     <path className='cls-21' d='M723.54 431.16h40.87v267.36h-40.87z' />
                     <path fill='#4d4d4d' d='M737.17 451.59h14.38v27.25h-14.38z' />
                     <path className='cls-11' d='M763.09 431.16v102.18h-6.82v10.21h6.82v64.71h-15.33v10.22h15.33v45.98h-18.74v10.22h-22.14v24.15h44.28v-.31h37.47V431.16h-40.87z'
