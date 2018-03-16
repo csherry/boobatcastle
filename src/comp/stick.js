@@ -15,7 +15,8 @@ class stick extends Component {
             myImg6:require("./image/tomb.svg"),
             allusers:[],
             myId: null,
-            showDisplay: false
+            showDisplay: false,
+            stickers:[]
         }
         this.handleImage = this.handleImage.bind(this);
         this.handDisplay = this.handDisplay.bind(this);
@@ -30,7 +31,7 @@ class stick extends Component {
     }
     
     componentDidMount(){
-        this.socket = mySocket("http://localhost:3003");
+        this.socket = mySocket("https://castlesticksocket.herokuapp.com/");
         
         this.socket.on("userjoined", (data)=>{
             this.setState({
@@ -58,6 +59,12 @@ class stick extends Component {
                     id:this.state.myId,
                     src: this.refs["u"+this.state.myId].src
                 })
+            })
+        })
+        
+        this.socket.on("newsticker", (data)=>{
+            this.setState({
+                stickers:data
             })
         })
         
@@ -97,6 +104,14 @@ class stick extends Component {
             )
         });
         
+        var allstickers = this.state.stickers.map((obj, i)=>{
+            var mstyle = {left:obj.x, top:obj.y}
+            return (
+                <img style={mstyle} key={i} src={obj.src} height={50}
+                className='allImgs' />
+            )
+        })
+        
         var comp = null;
         
         if (this.state.showDisplay === false){
@@ -108,6 +123,7 @@ class stick extends Component {
                 <div>
                     <div ref="thedisplay" id="display">
                         {allimgs}
+                        {allstickers}
                         <img ref="myImg" id="myImg" src={this.state.myImg} height={50}/>    
                     </div>
                     <div id="controls">

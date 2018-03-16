@@ -47,7 +47,7 @@ class Chatroom extends Component {
             mode:1
         })
         
-        this.socket = mySocket("http://localhost:10001");
+        this.socket = mySocket("https://castlechatsocket.herokuapp.com/");
         var uinfo = {
             name:this.state.myname,
             ava: this.state.avaIndex
