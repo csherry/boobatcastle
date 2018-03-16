@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.02 103">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cde1d4;
+      }
+
+      .cls-2 {
+        fill: #a1bfb0;
+      }
+
+      .cls-3 {
+        fill: #6b74c6;
+      }
+
+      .cls-4 {
+        fill: #959dc9;
+      }
+    </style>
+  </defs>
+  <title>icon-Blue</title>
+  <g id="图层_2" data-name="图层 2">
+    <g id="SecretRoom">
+      <g id="blueToxicant">
+        <path class="cls-1" d="M47.49,34.2V12h4.35a6,6,0,0,0,0-12H19.06a6,6,0,0,0,0,12h4.35V34.2a35.45,35.45,0,1,0,24.08,0Z"/>
+        <path class="cls-2" d="M35.57,103a35.45,35.45,0,0,0,12-68.8V12H52A6,6,0,1,0,52,0H35.57Z"/>
+        <path class="cls-3" d="M71,67.55a35.45,35.45,0,1,1-70.9,0Z"/>
+        <path class="cls-4" d="M35.57,103A35.45,35.45,0,0,1,.13,67.55H35.57Z"/>
+        <circle class="cls-4" cx="50.47" cy="75.4" r="1.82"/>
+        <ellipse class="cls-4" cx="41.96" cy="89.99" rx="3.04" ry="1.82"/>
+        <circle class="cls-4" cx="42.77" cy="80.67" r="2.23"/>
+      </g>
+    </g>
+  </g>
+</svg>

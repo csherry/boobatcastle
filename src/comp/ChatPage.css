@@ -1,0 +1,30 @@
+.cls-3-03{fill:#5a4749}
+.cls-4-03{fill:#494848}
+.cls-10-03{fill:#8d84b2}
+.cls-11-03{fill:#d0dfd9}
+.cls-12-03{fill:#a1bfb0}
+.cls-13-03{fill:#a52f2f}
+.cls-14-03{fill:#8e0c0c}
+.cls-17-03{fill:#86ac3b}
+.cls-18-03{fill:#448320}
+.cls-20-03{fill:#cde1d4}
+.cls-21-03{fill:#c18787}
+.cls-22-03{fill:#74965e}
+.cls-23-03{fill:#c86b7e}
+.cls-26-03{fill:#959dc9}
+.cls-33-03{stroke:#4b2e48;stroke-miterlimit:10}
+.cls-31-03,.cls-33-03{fill:#fffafc}
+.cls-32-03{fill:#4b2e48}
+.cls-34-03{fill:#1f2120}
+.cls-35-03{opacity:.75;mix-blend-mode:multiply}
+.cls-36-03{fill:#ffdf7a}
+.cls-37-03{fill:#ffa648}
+.cls-38-03{fill:#80394b}
+
+.ChatBG{
+    background-image: url(image/chatbg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: auto;
+}

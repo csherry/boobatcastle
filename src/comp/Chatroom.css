@@ -1,0 +1,58 @@
+.TheApp{
+    text-align: center;
+    height: 100vh;
+}
+
+#chatBox{
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    font-weight: 500;
+    font-size: 15pt;
+}
+
+#chatUser{
+    background-color: lightpink;
+    top:0;
+    right: 0;
+    width: 20vw;
+    height: 100vh;
+    position: absolute;
+    font-weight: 500;
+    font-size: 15pt;
+}
+
+
+#chatMsg{
+    background-color: lightblue;
+    width: 80vw;
+    left: 0;
+    top: 0;
+    position: absolute;
+    text-align: left;
+    height: 100vh;
+}
+
+#chatSend{
+    left: 5px;
+    position: absolute;
+    text-align: left;
+    bottom: 0;
+    width: 80vw;
+    font-size: 15pt;
+}
+
+#chatinput{
+    width: 80vw;
+    bottom:0;
+    left: 0;
+    position: absolute;
+}
+
+.type{
+    height: 5vh;
+    width: 76vw;
+    top: 0;
+    left: 0;
+}

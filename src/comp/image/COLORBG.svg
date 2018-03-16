@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #38425c;
+      }
+    </style>
+  </defs>
+  <title>BG</title>
+  <g id="图层_2" data-name="图层 2">
+    <g id="BG">
+      <rect class="cls-1" width="1366" height="768"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+#display {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    cursor: none;
+    background-color: beige;
+}
+
+#controls {
+    width: 20vw;
+    height: 75vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: lightsteelblue;
+}
+
+#myImg {
+    position: absolute;
+}
+
+.allImgs {
+    position: absolute;
+}
