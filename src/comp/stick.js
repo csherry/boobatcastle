@@ -60,6 +60,14 @@ class stick extends Component {
                     src: this.refs["u"+this.state.myId].src
                 })
             })
+            
+            this.refs.thedisplay.addEventListener("click", (ev)=>{
+                this.socket.emit('stick',{
+                    x:ev.pageX,
+                    y:ev.pageY,
+                    src:this.refs['u'+this.state.myId].src
+                })
+            })
         })
         
         this.socket.on("newsticker", (data)=>{
