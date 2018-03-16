@@ -135,7 +135,6 @@ class stick extends Component {
                         <img ref="myImg" id="myImg" src={this.state.myImg} height={50}/>    
                     </div>
                     <div id="controls">
-                        {this.state.myId}
                         <img src={this.state.myImg} height={50} onClick={this.handleImage}/>
                         <img src={this.state.myImg2} height={60} onClick={this.handleImage}/>
                         <img src={this.state.myImg3} height={60} onClick={this.handleImage}/>
