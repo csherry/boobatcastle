@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import mySocket from 'socket.io-client';
 import './Quiz.css';
-import Rooms from './Rooms.js';
+import Choose from './Choose.js';
 
 class Quiz extends Component {
     constructor(props){
@@ -12,10 +12,12 @@ class Quiz extends Component {
             host:null,
             qobj:{q:null, o1:null, o2:null}
         }
+        
+        this.leaveRoom = this.leaveRoom.bind(this);
     }
     
     componentDidMount(){
-        this.socket = mySocket('http://localhost:10000');
+        this.socket = mySocket('http://localhost:10022');
         
         this.socket.on("newq", (data)=>{
             this.setState({
@@ -59,6 +61,12 @@ class Quiz extends Component {
     handleA=(optionNum)=>{
         this.socket.emit("answer", optionNum);
     }
+    
+    leaveRoom(){
+        this.setState({
+            screen:3
+        })
+    }
 
     render() {
         var comp = null;
@@ -68,6 +76,7 @@ class Quiz extends Component {
                 <div>
                     <button onClick={this.handleRoom.bind(this, 'room1')}>Room 1</button>
                     <button onClick={this.handleRoom.bind(this, 'room2')}>Room 2</button>
+                    <button onClick={this.leaveRoom}>Leave</button>
                 </div>
             )
         } else if (this.state.screen === 1){
@@ -100,6 +109,10 @@ class Quiz extends Component {
                     </div>
                 )
             }
+        } else if (this.state.screen === 3){
+            comp = (
+                <Choose />
+            )
         }
         
         return (

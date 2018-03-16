@@ -6,8 +6,7 @@ import './App.css';
 import ChatPage from './comp/ChatPage.js';
 import {TweenLite, Power1, Circ, TimelineLite, TimelineMax} from "gsap";
 import StickPage from './comp/stick.js';
-import Quiz from './comp/Quiz.js';
-
+import Choose from './comp/Choose.js';
 
 class App extends Component {
     constructor(props){
@@ -151,7 +150,7 @@ class App extends Component {
             )
         } else if (this.state.ShowPage === 3){
             comp = (
-                <Quiz />
+                <Choose />
             )
         } else {
             comp = (
