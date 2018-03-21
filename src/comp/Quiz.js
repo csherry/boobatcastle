@@ -115,6 +115,7 @@ class Quiz extends Component {
                         <button onClick={this.handleA.bind(this, 2)}>{this.state.qobj.o2}</button>
                         <button onClick={this.handleA.bind(this, 3)}>{this.state.qobj.o3}</button>
                         <button onClick={this.handleA.bind(this, 4)}>{this.state.qobj.o4}</button>
+                        <button onClick={this.leaveRoom}>Leave</button>
                     </div>
                 )
             }
