@@ -17,7 +17,7 @@ class Quiz extends Component {
     }
     
     componentDidMount(){
-        this.socket = mySocket('http://localhost:10025');
+        this.socket = mySocket('https://castlequizsocket.herokuapp.com/');
         
         this.socket.on("newq", (data)=>{
             this.setState({
