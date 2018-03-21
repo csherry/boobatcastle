@@ -10,7 +10,7 @@ class Quiz extends Component {
         this.state = {
             screen:0,
             host:null,
-            qobj:{q:null, o1:null, o2:null}
+            qobj:{q:null, o1:null, o2:null, o3:null, o4:null}
         }
         
         this.leaveRoom = this.leaveRoom.bind(this);
@@ -52,6 +52,9 @@ class Quiz extends Component {
             q:this.refs.q.value,
             o1:this.refs.o1.value,
             o2:this.refs.o2.value,
+            o3:this.refs.o3.value,
+            o4:this.refs.o4.value,
+            o4:this.refs.o4.value,
             a:this.refs.a.value
         }
         
@@ -90,14 +93,18 @@ class Quiz extends Component {
             if (this.state.host === true){
                 comp = (
                     <div>
-                        <input ref='q' type='text' placeholder='Ask a question' />
+                        <input ref='q' type='text' placeholder='Question' />
                         <input ref='o1' type='text' placeholder='Option 1' />
                         <input ref='o2' type='text' placeholder='Option 2' />
+                        <input ref='o3' type='text' placeholder='Option 3' />
+                        <input ref='o4' type='text' placeholder='Option 4' />
                         <select ref='a'>
                             <option value='1'>Option 1</option>
                             <option value='2'>Option 2</option>
+                            <option value='3'>Option 3</option>
+                            <option value='4'>Option 4</option>
                         </select>
-                        <button onClick={this.handleQ}>Sumbit the Q</button>
+                        <button onClick={this.handleQ}>Sumbit the Question</button>
                     </div>
                 )
             } else if (this.state.host === false){
@@ -106,6 +113,8 @@ class Quiz extends Component {
                         <div>{this.state.qobj.q}</div>
                         <button onClick={this.handleA.bind(this, 1)}>{this.state.qobj.o1}</button>
                         <button onClick={this.handleA.bind(this, 2)}>{this.state.qobj.o2}</button>
+                        <button onClick={this.handleA.bind(this, 3)}>{this.state.qobj.o3}</button>
+                        <button onClick={this.handleA.bind(this, 4)}>{this.state.qobj.o4}</button>
                     </div>
                 )
             }
