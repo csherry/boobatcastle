@@ -87,6 +87,7 @@ class Quiz extends Component {
                 <div>
                     <button onClick={this.handleHost.bind(this, true)}>Host</button>
                     <button onClick={this.handleHost.bind(this, false)}>Player</button>
+                    <button onClick={this.leaveRoom}>Leave</button>
                 </div>
             )
         } else if (this.state.screen === 2){
@@ -105,6 +106,7 @@ class Quiz extends Component {
                             <option value='4'>Option 4</option>
                         </select>
                         <button onClick={this.handleQ}>Sumbit the Question</button>
+                        <button onClick={this.leaveRoom}>Leave</button>
                     </div>
                 )
             } else if (this.state.host === false){
