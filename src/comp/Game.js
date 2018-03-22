@@ -27,7 +27,7 @@ class Game extends Component {
         })
     }
 
-    render() {
+    render(){
         var comp = null;
         
         if(this.state.mode === 1){
