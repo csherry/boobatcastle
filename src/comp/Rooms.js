@@ -25,14 +25,16 @@ class Rooms extends Component {
                 <App />
             )     
         } else {
-            <div>
-                <button onClick={this.props.handDisplay.bind(this, "room1")}>Sticker Room 1</button>
-                <button onClick={this.props.handDisplay.bind(this, "room2")}>Sticker Room 2</button>
-                <button onClick={this.props.handDisplay.bind(this, "room3")}>Sticker Room 3</button>
-                <button onClick={this.props.handDisplay.bind(this, "room4")}>Sticker Room 4</button>
-                <button onClick={this.props.handDisplay.bind(this, "room5")}>Sticker Room 5</button>  
-                <button onClick={this.leaveRoom}>Leave</button>
-            </div>
+            comp = (
+                <div>
+                    <button onClick={this.props.handDisplay.bind(this, "room1")}>Sticker Room 1</button>
+                    <button onClick={this.props.handDisplay.bind(this, "room2")}>Sticker Room 2</button>
+                    <button onClick={this.props.handDisplay.bind(this, "room3")}>Sticker Room 3</button>
+                    <button onClick={this.props.handDisplay.bind(this, "room4")}>Sticker Room 4</button>
+                    <button onClick={this.props.handDisplay.bind(this, "room5")}>Sticker Room 5</button>  
+                    <button onClick={this.leaveRoom}>Leave</button>
+                </div>
+            )
         }
             
         return (
