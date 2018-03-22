@@ -132,7 +132,7 @@ class stick extends Component {
             comp =(
                 <Rooms handDisplay={this.handDisplay}/>
             )
-        } else (this.state.mode === 0) {
+        } else {
              comp = (
                 <div>
                     <div ref="thedisplay" id="display">
