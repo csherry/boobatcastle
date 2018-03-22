@@ -15,22 +15,16 @@ class stick extends Component {
             myImg6:require("./image/tomb.svg"),
             allusers:[],
             myId: null,
-            stickers:[],
-            mode:0
+            showDisplay: false,
+            stickers:[]
         }
         this.handleImage = this.handleImage.bind(this);
-        this.handDisplay = this.handDisplay.bind(this); this.leaveRoom = this.leaveRoom.bind(this);
-    }
-    
-    leaveRoom(){
-        this.setState({
-            mode:1
-        })
+        this.handDisplay = this.handDisplay.bind(this);
     }
     
     handDisplay(roomString){
         this.setState({
-            mode:1
+            showDisplay:true
         })
         
         this.socket.emit("joinroom", roomString);
@@ -128,7 +122,7 @@ class stick extends Component {
         
         var comp = null;
         
-        if (this.state.mode === 1){
+        if (this.state.showDisplay === false){
             comp =(
                 <Rooms handDisplay={this.handDisplay}/>
             )
@@ -147,7 +141,6 @@ class stick extends Component {
                         <img src={this.state.myImg4} height={60} onClick={this.handleImage}/>
                         <img src={this.state.myImg5} height={60} onClick={this.handleImage}/>
                         <img src={this.state.myImg6} height={60} onClick={this.handleImage}/>
-                        <button onClick={this.leaveRoom}>Leave</button>
                     </div>
                 </div>
             )
