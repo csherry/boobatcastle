@@ -33,7 +33,7 @@ class Game extends Component {
             roomstring:roomString
         })
          
-        this.socket = mySocket("http://localhost:8001");
+        this.socket = mySocket("https://castlegamesocket.herokuapp.com/");
         
         this.socket.emit("joingame", roomString);
         
