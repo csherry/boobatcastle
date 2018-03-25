@@ -11,7 +11,9 @@ class StartGame extends Component {
             time: {}, 
             newtime: {},
             seconds: 5,
-            newseconds: 15
+            newseconds: 15,
+            p1score: 0,
+            p2socre: 0
         }
         
         this.timer = 0;
@@ -21,6 +23,8 @@ class StartGame extends Component {
         this.newstartTimer = this.newstartTimer.bind(this);
         this.countDown = this.countDown.bind(this);
         this.newcountDown = this.newcountDown.bind(this);
+        this.player1 = this.player1.bind(this);
+        this.player2 = this.player2.bind(this);
     }
     
     componentWillUnmount(){
@@ -68,6 +72,7 @@ class StartGame extends Component {
     }
     
     countDown() {
+        alert("The more time you click your competitor, the more score you will get!")
         let seconds = this.state.seconds - 1;
         this.setState({
             time: this.secondsToTime(seconds),
@@ -91,6 +96,22 @@ class StartGame extends Component {
             clearInterval(this.newtimer);
             alert("Stop!");
         }
+    }
+    
+    player1(){
+        var p1num = 0;
+        p1num++;
+        this.setState({
+            p1score: p1num
+        })
+    }
+    
+    player2(){
+        var p2num = 0;
+        p2num++;
+        this.setState({
+            p2score: p2num
+        })
     }
     
     leaveRoom(){
@@ -142,7 +163,7 @@ class StartGame extends Component {
                         <path className='cls-2-06' d='M1106,671.57h4.85l2.71,11.06a25.32,25.32,0,0,1,.65,4.13h.11q0-.42.16-1.5t.23-1.7q.09-.62,2.43-12h4.92l-5.61,21a12.25,12.25,0,0,1-2.71,5.55,6.08,6.08,0,0,1-4.5,1.69,9.39,9.39,0,0,1-2.48-.3v-3.92a5.75,5.75,0,0,0,1.62.21q2.36,0,3.09-3.09l.33-1.23Z'
                         />
                     </g>
-                    <g id='player1Icon'>
+                    <g id='player1Icon' onClick = {this.player2}>
                         <path className='cls-4-06' d='M287.56,378.34h.13q8.17.27,16.35.18a376,376,0,0,0,63-6l-6.73-12.59,6.39-18.65a376,376,0,0,1-63,6q-7.95.09-15.9-.17h-.5q-7.95.25-15.9.17a376,376,0,0,1-63-6l6.39,18.65-6.73,12.59a376.05,376.05,0,0,0,63,6q8.18.09,16.35-.18Z'
                         />
                         <path className='cls-5-06' d='M287.56,378.34h.13q8.17.27,16.35.18a376,376,0,0,0,63-6l-6.73-12.59,6.39-18.65a376,376,0,0,1-63,6q-7.95.09-15.9-.17h-.5q-7.95.25-15.9.17a376,376,0,0,1-63-6l6.39,18.65-6.73,12.59a376.05,376.05,0,0,0,63,6q8.18.09,16.35-.18Z'
@@ -190,7 +211,7 @@ class StartGame extends Component {
                             />
                         </g>
                     </g>
-                    <g id='player2Icon'>
+                    <g id='player2Icon' onClick = {this.player1}>
                         <polygon className='cls-7-06' points='1164.88 393.49 1153.93 380.97 1164.88 368.44 1113.79 368.44 1113.79 393.49 1164.88 393.49'
                         />
                         <polygon className='cls-7-06' points='1000.23 393.49 1011.18 380.97 1000.23 368.44 1051.32 368.44 1051.32 393.49 1000.23 393.49'
@@ -283,6 +304,8 @@ class StartGame extends Component {
         </g>
 </svg>
                 m: {this.state.newtime.m} s: {this.state.newtime.s}
+                {this.state.p2score}
+                {this.state.p1score}
                 </div>
             )
         }
