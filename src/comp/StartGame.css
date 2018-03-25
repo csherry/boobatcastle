@@ -84,14 +84,14 @@ fill: #ffa648;
 }
 
 #p1{
-    top: 20px;
-    left: 0;
+    top: 200px;
+    left: 30px;
     position: absolute;
 }
 
 #p2{
-    right: 0;
-    top: 20px;
-        position: absolute;
+    right: 40px;
+    top: 200px;
+    position: absolute;
 
 }
