@@ -282,6 +282,7 @@ class StartGame extends Component {
             </g>
         </g>
 </svg>
+                m: {this.state.newtime.m} s: {this.state.newtime.s}
                 </div>
             )
         }
