@@ -1,80 +1,89 @@
-.cls-1-06 {
-    isolation: isolate;
+.cls-1-07 {
+isolation: isolate;
 }
 
-.cls-12-06, .cls-19, .cls-2-06 {
-    fill: #fff;
+.cls-16-07, .cls-2-07 {
+fill: #514c1d;
 }
 
-.cls-14-06, .cls-3-06 {
-    fill: #514c1d;
+.cls-3-07, .cls-4-07 {
+font-size: 45.71px;
+font-family: BodoniSvtyTwoOSITCTT-Book, Bodoni 72 Oldstyle;
 }
 
-.cls-4-06 {
-    fill: #eb3737;
+.cls-10-07, .cls-17-07, .cls-18-07, .cls-19-07, .cls-3-07 {
+fill: #fff;
 }
 
-.cls-5-06 {
-    fill: #c32828;
+.cls-4-07, .cls-6-07 {
+fill: none;
 }
 
-.cls-10-06, .cls-6-06 {
-    opacity: 0.25;
-    mix-blend-mode: multiply;
+.cls-11-07, .cls-4-07, .cls-6-07 {
+stroke: #f2f2f2;
 }
 
-.cls-10-06, .cls-7 {
-    fill: #353535;
+.cls-4-07 {
+stroke-width: 8px;
 }
 
-.cls-8-06 {
-    fill: #50504f;
+.cls-11-07, .cls-5-07, .cls-7-07 {
+fill: #353535;
 }
 
-.cls-9-06 {
-    fill: #169b29;
+.cls-14-07, .cls-5-07 {
+opacity: 0.25;
+mix-blend-mode: multiply;
 }
 
-.cls-11-06 {
-    fill: #f78f07;
+.cls-6-07 {
+stroke-width: 14px;
 }
 
-.cls-12-06 {
-    font-size: 22.78px;
-    font-family: BodoniSvtyTwoOSITCTT-Book, Bodoni 72 Oldstyle;
+.cls-8-07 {
+fill: #50504f;
 }
 
-.cls-13-06 {
-    fill: #801100;
+.cls-9-07 {
+fill: #f78f07;
 }
 
-.cls-14-06 {
-    font-size: 48px;
-    font-family: MarkerFelt-Thin, Marker Felt;
+.cls-11-07 {
+stroke-width: 15px;
 }
 
-.cls-15-06 {
-    letter-spacing: -0.04em;
+.cls-12-07 {
+fill: #eb3737;
 }
 
-.cls-16-06 {
-    letter-spacing: 0.05em;
+.cls-13-07 {
+fill: #c32828;
 }
 
-.cls-17-06 {
-    letter-spacing: -0.04em;
+.cls-15-07 {
+fill: #169b29;
 }
 
-.cls-18-06 {
-    letter-spacing: 0.05em;
+.cls-16-07 {
+font-size: 48px;
 }
 
-.cls-19-06 {
-    font-size: 21px;
-    font-family: OpenSans-CondensedBold, Open Sans Condensed;
-    font-weight: 700;
+.cls-16-07, .cls-17-07, .cls-18-07, .cls-19-07 {
+font-family: FjallaOne-Regular, Fjalla One;
 }
 
-.cls-20-06 {
-    fill: #ffa648;
+.cls-17-07 {
+font-size: 21px;
+}
+
+.cls-18-07 {
+font-size: 24px;
+}
+
+.cls-19-07 {
+font-size: 40px;
+}
+
+.cls-20-07 {
+fill: #ffa648;
 }
