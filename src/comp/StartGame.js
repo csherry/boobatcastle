@@ -9,13 +9,18 @@ class StartGame extends Component {
         this.state = {
             mode:0,
             time: {}, 
-            seconds: 5
+            newtime: {},
+            seconds: 5,
+            newseconds: 15
         }
         
         this.timer = 0;
+        this.newtimer = 0;
         this.leaveRoom = this.leaveRoom.bind(this);
         this.startTimer = this.startTimer.bind(this);
+        this.newstartTimer = this.newstartTimer.bind(this);
         this.countDown = this.countDown.bind(this);
+        this.newcountDown = this.newcountDown.bind(this);
     }
     
     componentWillUnmount(){
@@ -26,6 +31,11 @@ class StartGame extends Component {
         let timeLeftVar = this.secondsToTime(this.state.seconds);
         this.setState({ 
             time: timeLeftVar 
+        });
+        
+        let newtimeLeftVar = this.secondsToTime(this.state.newseconds);
+        this.setState({ 
+            newtime: newtimeLeftVar 
         });
     }
     
@@ -51,6 +61,12 @@ class StartGame extends Component {
         }
     }
     
+    newstartTimer() {
+        if (this.newtimer == 0) {
+            this.newtimer = setInterval(this.newcountDown, 1000);
+        }
+    }
+    
     countDown() {
         let seconds = this.state.seconds - 1;
         this.setState({
@@ -60,7 +76,20 @@ class StartGame extends Component {
 
         if(seconds == 0) { 
             clearInterval(this.timer);
-            alert("Start!")
+            alert("Start!");
+        }
+    }
+    
+    newcountDown() {
+        let newseconds = this.state.newseconds - 1;
+        this.setState({
+            newtime: this.secondsToTime(newseconds),
+            mewseconds: newseconds,
+        });
+
+        if(newseconds == 0) { 
+            clearInterval(this.newtimer);
+            alert("Stop!");
         }
     }
     
@@ -99,7 +128,7 @@ class StartGame extends Component {
                         <path className='cls-2-06' d='M310.44,671.57h4.85L318,682.63a25.32,25.32,0,0,1,.65,4.13h.11q0-.42.16-1.5t.23-1.7q.09-.62,2.43-12h4.92l-5.61,21a12.25,12.25,0,0,1-2.71,5.55,6.08,6.08,0,0,1-4.5,1.69,9.39,9.39,0,0,1-2.48-.3v-3.92a5.75,5.75,0,0,0,1.62.21q2.36,0,3.09-3.09l.33-1.23Z'
                         />
                     </g>
-                    <g id='player2Ready' onClick={this.startTimer}>
+                    <g id='player2Ready' onClick={this.newstartTimer}>
                         <rect className='cls-3-06' x='981' y='644' width='204' height='70' rx='22.9'
                         ry='22.9' />
                         <path className='cls-2-06' d='M1043.86,681.15v10h-4.78v-25.7h6.26q4,0,5.86,1.88t1.89,5.75q0,4.87-3.29,6.8l4.94,11.27h-5.12l-4.06-10Zm0-4.11h1.23a2.87,2.87,0,0,0,2.43-1,4.63,4.63,0,0,0,.74-2.86,4,4,0,0,0-.78-2.8,3.17,3.17,0,0,0-2.42-.83h-1.2Z'
