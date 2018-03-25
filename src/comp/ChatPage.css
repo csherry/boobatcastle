@@ -20,11 +20,9 @@
 .cls-36-03{fill:#ffdf7a}
 .cls-37-03{fill:#ffa648}
 .cls-38-03{fill:#80394b}
-
 .ChatBG{
     background-image: url(image/chatbg.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
     width: 100vw;
-    height: auto;
+    height: 100vh;
 }

@@ -13,7 +13,7 @@ class StartGame extends Component {
             seconds: 5,
             newseconds: 15,
             p1score: 0,
-            p2socre: 0
+            p2score: 0
         }
         
         this.timer = 0;

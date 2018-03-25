@@ -1,8 +1,8 @@
 .TheApp{
     text-align: center;
     height: 100vh;
+    
 }
-
 #chatBox{
     width: 100vw;
     top: 0;
@@ -11,9 +11,8 @@
     font-weight: 500;
     font-size: 15pt;
 }
-
 #chatUser{
-    background-color: lightpink;
+ background-color:#EFF1FA;
     top:0;
     right: 0;
     width: 20vw;
@@ -21,19 +20,20 @@
     position: absolute;
     font-weight: 500;
     font-size: 15pt;
+    color: #42232D;
+    font-weight: bold;
 }
-
-
 #chatMsg{
-    background-color: lightblue;
+    background-image:url("image/chatingBG.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 80vw;
     left: 0;
     top: 0;
     position: absolute;
-    text-align: left;
+    text-align: center;
     height: 100vh;
 }
-
 #chatSend{
     left: 5px;
     position: absolute;
@@ -42,17 +42,31 @@
     width: 80vw;
     font-size: 15pt;
 }
-
 #chatinput{
-    width: 80vw;
-    bottom:0;
-    left: 0;
+    width: 80px;
+    height: 80px;
     position: absolute;
+    bottom: 40px;
 }
-
+.chatBtn{
+    background-color: white;
+    border: 2px solid #FFD436;
+    display: inline-block;
+    font-size: 16pt; 
+    height: 3vh;
+    width: 50vw;
+    color: black;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+    font-size: 9pt;
+}
+.chatBtn:hover{
+    background-color: #FFD436;
+    color: white;
+}
 .type{
-    height: 5vh;
-    width: 76vw;
-    top: 0;
-    left: 0;
+    height: 12vh;
+    width: 50vw;   
 }

@@ -1,0 +1,22 @@
+body{
+    background-image:url("image/chatingBG.svg");
+    background-size: cover;
+    background-repeat: repeat;
+    text-align: center;
+}
+/*
+#quizBtn{
+    align-content: center;
+}
+#GameBtn{
+    align-content: center;
+}
+#leaveBtn{
+    
+    align-items: center;
+}
+#btndiv{
+    width: 100vw;
+    height: 50vh;
+    align-content: center;
+}*/
