@@ -88,8 +88,11 @@ class StartGame extends Component {
             newtime: this.secondsToTime(newseconds),
             newseconds: newseconds,
         });
-
-        if(newseconds == 0) { 
+        
+        if (newseconds == 0){
+            alert("Start!");
+        }
+        if(newseconds == 0) {
             clearInterval(this.newtimer);
             alert("Game Over!");
             alert("Player 1 score :" + this.state.p1score);
