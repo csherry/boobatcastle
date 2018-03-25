@@ -99,18 +99,14 @@ class StartGame extends Component {
     }
     
     player1(){
-        var p1num = 0;
-        p1num++;
         this.setState({
-            p1score: p1num
+            p1score: this.state.p1score + 1
         })
     }
     
     player2(){
-        var p2num = 0;
-        p2num++;
         this.setState({
-            p2score: p2num
+            p2score: this.state.p2score + 1
         })
     }
     
