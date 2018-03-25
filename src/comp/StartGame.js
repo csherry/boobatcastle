@@ -16,12 +16,12 @@ class StartGame extends Component {
             p2score: 0
         }
         
-        this.timer = 0;
+//        this.timer = 0;
         this.newtimer = 0;
         this.leaveRoom = this.leaveRoom.bind(this);
-        this.startTimer = this.startTimer.bind(this);
+//        this.startTimer = this.startTimer.bind(this);
         this.newstartTimer = this.newstartTimer.bind(this);
-        this.countDown = this.countDown.bind(this);
+//        this.countDown = this.countDown.bind(this);
         this.newcountDown = this.newcountDown.bind(this);
         this.player1 = this.player1.bind(this);
         this.player2 = this.player2.bind(this);
@@ -59,7 +59,7 @@ class StartGame extends Component {
         return obj;
     }
     
-    startTimer() {
+    /*startTimer() {
         if (this.timer == 0) {
             this.timer = setInterval(this.countDown, 1000);
         }
@@ -72,18 +72,18 @@ class StartGame extends Component {
     }
     
     countDown() {
-        alert("The more time you click your competitor, the more score you will get!")
         let seconds = this.state.seconds - 1;
         this.setState({
             time: this.secondsToTime(seconds),
             seconds: seconds,
         });
 
-        if(seconds == 0) { 
+        if(seconds == 0) {
             clearInterval(this.timer);
+            alert("The more time you click your competitor, the more score you will get!");
             alert("Start!");
         }
-    }
+    }*/
     
     newcountDown() {
         let newseconds = this.state.newseconds - 1;
@@ -94,7 +94,9 @@ class StartGame extends Component {
 
         if(newseconds == 0) { 
             clearInterval(this.newtimer);
-            alert("Stop!");
+            alert("Game Over!");
+            alert("Player 1 score :" + this.state.p1score);
+            alert("Player 2 score :" + this.state.p2score);
         }
     }
     
@@ -131,7 +133,7 @@ class StartGame extends Component {
             <g id='图层_2' dataName='图层 2'>
                 <g id='bangbang'>
                     <rect id='BG' className='cls-2-06' width='1366' height='768' />
-                    <g id='player1Ready' onClick={this.startTimer}>
+                    <g id='player1Ready' >
                         <rect className='cls-3-06' x='185.41' y='644' width='204' height='70' rx='22.9'
                         ry='22.9' />
                         <path className='cls-2-06' d='M248.27,681.15v10h-4.78v-25.7h6.26q4,0,5.86,1.88t1.89,5.75q0,4.87-3.29,6.8l4.94,11.27H254l-4.06-10Zm0-4.11h1.23a2.87,2.87,0,0,0,2.43-1,4.63,4.63,0,0,0,.74-2.86,4,4,0,0,0-.78-2.8,3.17,3.17,0,0,0-2.42-.83h-1.2Z'
@@ -300,8 +302,7 @@ class StartGame extends Component {
         </g>
 </svg>
                 m: {this.state.newtime.m} s: {this.state.newtime.s}
-                {this.state.p2score}
-                {this.state.p1score}
+                
                 </div>
             )
         }
