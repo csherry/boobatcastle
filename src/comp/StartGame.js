@@ -16,12 +16,9 @@ class StartGame extends Component {
             p2score: 0
         }
         
-//        this.timer = 0;
         this.newtimer = 0;
         this.leaveRoom = this.leaveRoom.bind(this);
-//        this.startTimer = this.startTimer.bind(this);
         this.newstartTimer = this.newstartTimer.bind(this);
-//        this.countDown = this.countDown.bind(this);
         this.newcountDown = this.newcountDown.bind(this);
         this.player1 = this.player1.bind(this);
         this.player2 = this.player2.bind(this);
@@ -63,7 +60,7 @@ class StartGame extends Component {
         if (this.timer == 0) {
             this.timer = setInterval(this.countDown, 1000);
         }
-    }
+    }*/
     
     newstartTimer() {
         if (this.newtimer == 0) {
@@ -71,7 +68,7 @@ class StartGame extends Component {
         }
     }
     
-    countDown() {
+    /*countDown() {
         let seconds = this.state.seconds - 1;
         this.setState({
             time: this.secondsToTime(seconds),
