@@ -89,7 +89,7 @@ class StartGame extends Component {
             newseconds: newseconds,
         });
         
-        if (newseconds == 15){
+        if (newseconds == 14){
             alert("Start!");
         }
         if(newseconds == 0) {
@@ -127,7 +127,7 @@ class StartGame extends Component {
             )
         } else {
             comp = (
-                <div>
+                <div id="App">
                     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1366 768'>
         <g className='cls-1-06'>
             <g id='图层_2' dataName='图层 2'>
@@ -301,7 +301,6 @@ class StartGame extends Component {
             </g>
         </g>
 </svg>
-                m: {this.state.newtime.m} s: {this.state.newtime.s}
                 <div id="p1">{this.state.p1score}</div>
                 <div id="p2">{this.state.p2score}</div>
                 
