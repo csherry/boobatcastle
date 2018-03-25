@@ -7,7 +7,7 @@ import ava1 from './image/iconGreen.svg';
 import ava2 from './image/icon-Blue.svg';
 import ava3 from './image/iconPink.svg';
 import ava4 from './image/iconRed.svg';
-import exit from './image/back.svg';
+import exit from './image/Back.svg';
 
 class Chatroom extends Component {
     constructor(props){
