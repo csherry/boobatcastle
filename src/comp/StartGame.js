@@ -89,7 +89,7 @@ class StartGame extends Component {
             newseconds: newseconds,
         });
         
-        if (newseconds == 0){
+        if (newseconds == 15){
             alert("Start!");
         }
         if(newseconds == 0) {
@@ -302,6 +302,8 @@ class StartGame extends Component {
         </g>
 </svg>
                 m: {this.state.newtime.m} s: {this.state.newtime.s}
+                <div id="p1">{this.state.p1score}</div>
+                <div id="p2">{this.state.p2score}</div>
                 
                 </div>
             )

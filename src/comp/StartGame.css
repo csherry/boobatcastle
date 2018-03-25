@@ -82,3 +82,13 @@ fill: #ffa648;
 #player1Ready {
     opacity: 0;
 }
+
+#p1{
+    top: 20px;
+    left: 0;
+}
+
+#p2{
+    right: 0;
+    top: 20px;
+}
