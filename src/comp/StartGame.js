@@ -84,7 +84,7 @@ class StartGame extends Component {
         let newseconds = this.state.newseconds - 1;
         this.setState({
             newtime: this.secondsToTime(newseconds),
-            mewseconds: newseconds,
+            newseconds: newseconds,
         });
 
         if(newseconds == 0) { 
